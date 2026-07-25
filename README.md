@@ -1,4 +1,4 @@
-# Hotchand_FreeShippingWeightLimit
+# Hotchand - Free Shipping Weight Limit
 
 **Magento 2 - Free Shipping with Weight-Based Flat Rate Fallback**
 
