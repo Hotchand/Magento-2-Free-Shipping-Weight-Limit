@@ -1,0 +1,12 @@
+# Dev tools
+vendor/
+.idea/
+.vscode/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Composer lock (modules should not commit this)
+composer.lock
