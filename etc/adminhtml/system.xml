@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="freeshipping">
+
+                <!--
+                    These fields are added into Magento's existing native
+                    "Free Shipping" carrier settings group (Stores → Configuration
+                    → Sales → Shipping Methods → Free Shipping), right alongside
+                    the carrier's own Enabled/Title/Minimum Order Amount fields.
+                -->
+
+                <field id="weight_restriction_enabled" translate="label comment" type="select"
+                       sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Weight Restriction</label>
+                    <comment>If enabled, Free Shipping will only be offered when the cart's total weight is at or below the limit set below.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="max_weight" translate="label comment" type="text"
+                       sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maximum Weight for Free Shipping (lbs)</label>
+                    <comment>Free Shipping will not be offered if the cart's total weight exceeds this value. Uses your store's configured weight unit.</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <depends>
+                        <field id="weight_restriction_enabled">1</field>
+                    </depends>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

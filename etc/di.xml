@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!--
+        Plugin onto Magento's native Free Shipping carrier.
+        If the weight restriction is enabled and the cart's total weight
+        exceeds the configured limit, collectRates() is short-circuited
+        to return false (no rate offered) instead of calling the original
+        method — meaning Free Shipping simply won't appear as an option.
+    -->
+    <type name="Magento\OfflineShipping\Model\Carrier\Freeshipping">
+        <plugin name="hotchand_freeshipping_weight_limit"
+                type="Hotchand\FreeShippingWeightLimit\Plugin\RestrictByWeightPlugin"
+                sortOrder="10"/>
+    </type>
+
+</config>
