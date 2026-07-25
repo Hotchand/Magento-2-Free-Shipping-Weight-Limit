@@ -1,0 +1,63 @@
+{
+    "name": "hotchand/module-free-shipping-weight-limit",
+    "description": "Magento 2 shipping module that provides free shipping up to a configurable weight limit and applies a flat rate fee for orders exceeding that limit.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hotchand Sajnani",
+            "email": "info@connectresale.com",
+            "homepage": "https://connectresale.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "magento2",
+        "magento",
+        "shipping",
+        "free-shipping",
+        "weight-limit",
+        "flat-rate",
+        "carrier",
+        "hotchand"
+    ],
+    "homepage": "https://github.com/Hotchand/Magento-2-Free-Shipping-Weight-Limit",
+    "support": {
+        "issues": "https://github.com/Hotchand/Magento-2-Free-Shipping-Weight-Limit/issues",
+        "source": "https://github.com/Hotchand/Magento-2-Free-Shipping-Weight-Limit"
+    },
+    "require": {
+        "php": ">=8.1.0",
+        "magento/framework": ">=103.0.0",
+        "magento/module-shipping": ">=100.4.0",
+        "magento/module-store": ">=101.0.0",
+        "magento/module-config": ">=101.0.0",
+        "magento/module-sales": ">=103.0.0",
+        "magento/module-backend": ">=101.0.0",
+        "magento/module-directory": ">=100.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "squizlabs/php_codesniffer": "^3.7",
+        "magento/magento-coding-standard": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Hotchand\\FreeShippingWeightLimit\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hotchand\\FreeShippingWeightLimit\\Test\\": "Test/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
